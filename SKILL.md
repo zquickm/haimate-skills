@@ -1,14 +1,32 @@
 ---
-name: haimate-github-smoke-test
-description: 仅当用户明确要求执行 HaiMate GitHub 连通性测试时使用，用于验证技能导入和加载，不处理业务资料。
+name: internal-comms
+description: A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).
+license: Complete terms in LICENSE.txt
 ---
 
-<!-- 本文件用于验证 HaiMate 的 GitHub 技能能否导入 DuMate，不包含业务数据或凭证。 -->
+## When to use this skill
+To write internal communications, use this skill for:
+- 3P updates (Progress, Plans, Problems)
+- Company newsletters
+- FAQ responses
+- Status reports
+- Leadership updates
+- Project updates
+- Incident reports
 
-# HaiMate GitHub 连通性测试
+## How to use this skill
 
-当用户明确要求“执行 HaiMate GitHub 连通性测试”时，仅回复：
+To write any internal communication:
 
-HAIMATE_GITHUB_SKILL_OK
+1. **Identify the communication type** from the request
+2. **Load the appropriate guideline file** from the `examples/` directory:
+    - `examples/3p-updates.md` - For Progress/Plans/Problems team updates
+    - `examples/company-newsletter.md` - For company-wide newsletters
+    - `examples/faq-answers.md` - For answering frequently asked questions
+    - `examples/general-comms.md` - For anything else that doesn't explicitly match one of the above
+3. **Follow the specific instructions** in that file for formatting, tone, and content gathering
 
-此技能无需调用工具、访问网络或读写文件。其他请求不使用此技能。
+If the communication type doesn't match any existing guideline, ask for clarification or more context about the desired format.
+
+## Keywords
+3P updates, company newsletter, company comms, weekly update, faqs, common questions, updates, internal comms
